@@ -1,0 +1,84 @@
+/* app.component.css หรือ exam.css */
+.exam-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.exam-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.exam-container label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.exam-container input[type="text"] {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.exam-container form div {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border-left: 4px solid #4CAF50;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.exam-container p {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.exam-container input[type="radio"] {
+  margin-right: 8px;
+}
+
+.exam-container button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.exam-container button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.exam-container p.result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1E88E5;
+}
+
+@media (max-width: 768px) {
+  .exam-container {
+    padding: 20px 15px;
+  }
+}
+
+

@@ -1,0 +1,19 @@
+<div class="exam-container">
+  <label>ชื่อ-สกุล: <input type="text" [(ngModel)]="name" /></label>
+  <form (ngSubmit)="onSubmit()">
+    @for (q of questions; track $index) {
+        <div>
+            <p>{{q.id}}. {{q.text}}</p>
+            <label><input type="radio" [value]="'A'" [(ngModel)]="answers[q.id]" name="q{{q.id}}" /> {{q.answerA}}</label><br/>
+            <label><input type="radio" [value]="'B'" [(ngModel)]="answers[q.id]" name="q{{q.id}}" /> {{q.answerB}}</label><br/>
+            <label><input type="radio" [value]="'C'" [(ngModel)]="answers[q.id]" name="q{{q.id}}" /> {{q.answerC}}</label><br/>
+            <label><input type="radio" [value]="'D'" [(ngModel)]="answers[q.id]" name="q{{q.id}}" /> {{q.answerD}}</label><br/>
+        </div>
+    }
+    @if (!isSubmitted) {
+        <button type="submit">ส่งคำตอบ</button>
+    }@else {
+        <button type="button" (click)="resetExam()">สอบอีกครั้ง</button> <p>คุณ {{result?.name}} สอบได้คะแนน: {{result?.score}}/{{questions.length}}</p>
+    }
+  </form>
+</div>
